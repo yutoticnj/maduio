@@ -18,8 +18,29 @@ package com.akie.java;
         常用的权限修饰符：private public 缺省 protected
     局部变量：不可以使用权限修饰符
 
+    2.3默认初始化值得情况
+    属性：类的属性，根据其类型，都有默认初始化值
+        整型（byte short int long）0
+        浮点型（float、double） 0.0
+        字符型（char） 0 '\u000'
+        布尔型（boolean） false
+
+        应用数据类型（类、数组、接口） null
+
+    局部变量：没有默认初始化值
+        意味着，再掉用钱要先赋值
+        特别的，形参在调用时赋值即可
+
 * */
 public class UserTest {
+    public static void main(String[] args) {
+        User u1 = new User();
+        System.out.println(u1.name);
+        System.out.println(u1.age);
+        System.out.println(u1.isMale);
+
+        u1.talk("日语");
+    }
 }
 
 class User {
