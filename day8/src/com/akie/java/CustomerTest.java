@@ -27,12 +27,22 @@ package com.akie.java;
 *       3.3.方法名：属于标识符，遵循名字定义规范
 *       3.4形参列表：方法可以声明0个，一个或者多个
 *           格式：数据类型1 形参1，数据类型2 形参2， 。。。。。。
+*       3.5方法体：方法功能的具体体现
 *
 *
-* return关键字的使用：
- * */
+* 4、return关键字的使用：
+*       1、适用范围：在方法体中
+*       2、作用：  1 结束方法
+*                 2 针对有返回值类型的方法  使用“return 数据”  返回所需的数据
+* 5、方法的使用中：  可以调用当前类的属性或方法
+*       特殊的，方法A中调用了方法A：递归方法。
+*       方法中不可以定义方法
+*
+* */
 public class CustomerTest {
     public static void main(String[] args) {
+        Customer cust1 = new Customer();
+        cust1.sleep(8);
 
     }
 }
@@ -48,6 +58,7 @@ class Customer {
 
     public void sleep(int hour) {
         System.out.println("休息了" + hour + "个小时");
+        eat();
     }
 
     public String getName() {

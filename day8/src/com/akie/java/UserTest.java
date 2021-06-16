@@ -22,7 +22,7 @@ package com.akie.java;
     属性：类的属性，根据其类型，都有默认初始化值
         整型（byte short int long）0
         浮点型（float、double） 0.0
-        字符型（char） 0 '\u000'
+        字符型（char） 0
         布尔型（boolean） false
 
         应用数据类型（类、数组、接口） null
