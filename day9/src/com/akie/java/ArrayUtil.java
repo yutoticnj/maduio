@@ -87,15 +87,32 @@ public class ArrayUtil {
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
-                    int temp;
-                    temp = arr[j];
-                    arr[j] = arr[j + 1];
-                    arr[j + 1] = temp;
+//                    int temp;
+//                    temp = arr[j];
+//                    arr[j] = arr[j + 1];
+//                    arr[j + 1] = temp;
+                    //错误的:
+                    //swap(arr[j] , arr[j + 1]
+                    //正确的:
+                    swap(arr,j,j +1);
                 }
             }
         }
     }
 
+    //错误的：交换数组中指定两个位置元素的值
+//    public void swap(int i , int j) {
+//        int temp = i;
+//        i = j;
+//        j = temp;
+//    }
+
+    //正确的：交换数组中指定两个位置元素的值
+    public void swap(int[]arr,int i ,int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 
     //遍历数组
     public void print(int[] arr){
