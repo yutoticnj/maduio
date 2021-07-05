@@ -56,7 +56,6 @@ public class Chromosome {
 
     /**
      * @param size
-     * @Author:lulei
      * @Description: 初始化基因长度
      */
     private void initGeneSize(int size) {
@@ -104,7 +103,6 @@ public class Chromosome {
 
     /**
      * @param num
-     * @Author:lulei
      * @Description: 基因num个位置发生变异
      */
     public void mutation(int num) {

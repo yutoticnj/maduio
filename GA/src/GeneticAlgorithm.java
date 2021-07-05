@@ -135,7 +135,7 @@ public abstract class GeneticAlgorithm {
         }
         averageScore = totalScore / popSize;
         //因为精度问题导致的平均值大于最好值，将平均值设置成最好值
-        averageScore = averageScore > bestScore ? bestScore : averageScore;
+        averageScore = Math.min(averageScore, bestScore);
     }
 
     /**
