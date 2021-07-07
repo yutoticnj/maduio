@@ -7,5 +7,8 @@ public class PersonTest {
         Person b = new Person();
         b.setAge(18);
         System.out.println("年龄为： " + b.getAge());
+
+        Person p2 = new Person("Tom",31);
+        System.out.println("姓名为：" + p2.getName() + "，年龄为： " + p2.getAge());
     }
 }
