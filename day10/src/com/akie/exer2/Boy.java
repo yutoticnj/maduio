@@ -31,7 +31,7 @@ public class Boy {
         if (this.age > 22) {
             System.out.println("你可以去合法登记结婚啦！");
         } else {
-            System.out.println("先多谈一谈恋爱 ");
+            System.out.println("先多谈一谈恋爱吧");
 
         }
     }
