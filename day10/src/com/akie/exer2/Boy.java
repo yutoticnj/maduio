@@ -25,7 +25,7 @@ public class Boy {
         this.age = age;
     }
     public void marry(Girl girl) {
-        System.out.println("我想娶 " + girl.getName());
+        System.out.println("我想娶" + girl.getName());
     }
     public void shout(){
         if (this.age > 22) {
