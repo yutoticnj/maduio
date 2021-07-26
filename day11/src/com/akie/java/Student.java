@@ -11,7 +11,7 @@ public class Student extends Person{
 
     public Student(String name, int age, String major) {
         this.name = name;
-        this.age = age;
+        getAge();
         this.major = major;
     }
 

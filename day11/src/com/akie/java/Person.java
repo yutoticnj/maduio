@@ -1,8 +1,8 @@
 package com.akie.java;
 
-public class Person {
+public class Person extends Creature{
     String name;
-    int age;
+    private int age;
 
     public Person() {
 
@@ -19,5 +19,13 @@ public class Person {
 
     public void sleep() {
         System.out.println("睡觉");
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
