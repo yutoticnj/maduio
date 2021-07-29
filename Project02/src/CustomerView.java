@@ -21,11 +21,12 @@ public class CustomerView {
 
             int menu = CMUtility.readMenuSelection();
             switch (menu) {
-                case '1' -> addNewCustomer();
-                case '2' -> modifyCustomer();
-                case '3' -> deleteCustomer();
-                case '4' -> listAllCustomers();
-                default -> {
+                case '1': addNewCustomer();
+                case '2': modifyCustomer();
+                case '3': deleteCustomer();
+                case '4': listAllCustomers();
+                default :
+                {
                     System.out.print("确认是否退出(Y/N)：");
                     char exit = CMUtility.readConfirmSelection();
                     if (exit == 'Y') {
