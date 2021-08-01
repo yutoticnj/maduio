@@ -1,7 +1,8 @@
-package com.akie.java;
+package com.akie.java3;
 
-public class Student extends Person{
+public class Student extends Person {
     String major;
+    int id = 2000;
 
     public Student(){}
 
@@ -19,11 +20,12 @@ public class Student extends Person{
         System.out.println("学生应该多吃有营养的食物");
     }
 
-    @Override
-    public void sleep(int hours) {
-        super.sleep(hours);
-
+    public void show(){
+        System.out.println("name: " + this.name + "  age: " + super.age);
+        System.out.println("idP = " + super.id + "  idS = " + this.id);
     }
+
+
 }
 
 

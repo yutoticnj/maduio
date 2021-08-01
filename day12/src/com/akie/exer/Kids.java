@@ -25,4 +25,14 @@ public class Kids extends ManKind{
     public void setYearsOld(int yearsOld) {
         this.yearsOld = yearsOld;
     }
+
+    //修改 练习 1.2 中 定义的类 Kids ，在 Kids 中重新定义 employed方法，
+    // 覆盖父类 ManKind 中定义 的 employed 方法，
+    // 输出“ Kids should study and no job.”
+
+
+    @Override
+    public void employed() {
+        System.out.println("Kids should study and no job.");
+    }
 }
