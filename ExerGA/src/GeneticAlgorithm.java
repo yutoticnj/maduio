@@ -173,6 +173,11 @@ public abstract class GeneticAlgorithm {
      */
     public abstract double caculateY(double x);
 
+
+
+
+
+
     public void setPopulation(List<Chromosome> population) {
         this.population = population;
     }
