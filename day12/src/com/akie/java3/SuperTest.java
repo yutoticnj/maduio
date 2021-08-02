@@ -12,15 +12,24 @@ package com.akie.java3;
 *   3.3特殊情况：当子类重写了父类中的方法以后，我们想在子类的方法中调用父类中被重写的方法时，
 * 则必须显式的使用"super.方法"的方式，表明调用的是父类中被重写的方法。
 
- *
+ * 4、super调用构造器
+*   4.1我们可以在子类构造器中显式的使用“super（形参列表）”的方式，调用父类中声明的制定的构造器
+*   4.2“super（形参列表）”的使用，必须声明在子类构造器的首行。
+*   4.3我们在类的构造器中，针对“super（形参列表）”或“this（形参列表）”只能二选一，不能同时出现
+*   4.4在构造器的首行，没有显式的声明“super（形参列表）”或“this（形参列表）”，则默认调用的是父类中空参的构造器
+*   4.5在类的多个构造器中，至少有一个类的构造器中使用了“super（形参列表）”，调用父类中的构造器
 *
 * */
 public class SuperTest {
     public static void main(String[] args) {
 
         Student s1 = new Student();
-
         s1.show();
+
+        System.out.println();
+
+        Student s2 = new Student("Tom",21,"IT");
+        s2.show();
 
     }
 }

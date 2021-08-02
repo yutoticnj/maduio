@@ -10,6 +10,12 @@ public class Student extends Person {
         this.major = major;
     }
 
+    public Student(String name,int age,String major){
+        super(name, age);
+        this.major = major;
+
+    }
+
     public void study(){
         System.out.println("学习，专业是：" + major);
     }

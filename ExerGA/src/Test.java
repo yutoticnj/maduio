@@ -6,14 +6,15 @@ public class Test {
 
         City[] cities = new City[10];
         Airport[] airports = new Airport[5];
-        Chromosome chro = new Chromosome(10);
+        Chromosome chro = new Chromosome(1);
 
 
         Test t =new Test();
         t.init(cities,airports);
         System.out.println("总成本是：" + t.calculate(cities,airports,cost,punish));
+        //基因表示的十进制数
         chro.getNum();
-
+        System.out.println(chro.getNum());
     }
 
     //初始化
