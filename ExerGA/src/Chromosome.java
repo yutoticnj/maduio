@@ -6,8 +6,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Chromosome {
-    private boolean[] gene;//基因序列
+    public boolean[] gene;//基因序列
     private double score;//对应的函数得分
+
+    public boolean[] getGene() {
+        return gene;
+    }
+
+    public void setGene(boolean[] gene) {
+        this.gene = gene;
+    }
 
     //score的get set 方法
     public double getScore() {
@@ -68,8 +76,6 @@ public class Chromosome {
 
 
     /**
-     * @param c1
-     * @param c2
      * @Description: 遗传产生下一代
      */
     public static List<Chromosome> genetic(Chromosome p1, Chromosome p2) {
@@ -134,4 +140,6 @@ public class Chromosome {
         }
         return num;
     }
+
+
 }

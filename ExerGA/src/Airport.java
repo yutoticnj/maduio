@@ -1,7 +1,7 @@
 public class Airport {
     private double cost;
     private double ability;
-    private int isBuild;
+    private boolean isBuild;
 
     public double getCost() {
         return cost;
@@ -19,11 +19,11 @@ public class Airport {
         this.ability = ability;
     }
 
-    public int isBuild() {
+    public boolean getBuild() {
         return isBuild;
     }
 
-    public void setBuild(int build) {
+    public void setBuild(boolean build) {
         isBuild = build;
     }
 }

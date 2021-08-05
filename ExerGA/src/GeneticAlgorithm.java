@@ -22,6 +22,9 @@ public abstract class GeneticAlgorithm {
     private double y; //记录历史种群中最好的Y值
     private int geneI;//x y所在代数
 
+    City[] cities =  new City[10];
+    Airport[] airports = new Airport[5];
+
     public GeneticAlgorithm(int geneSize) {
         this.geneSize = geneSize;
     }
@@ -110,16 +113,16 @@ public abstract class GeneticAlgorithm {
      * @Description: 计算种群适应度
      */
     private void caculteScore() {
-        setChromosomeScore(population.get(0));
+        setChromosomeScore(population.get(0),cities,airports);
         bestScore = population.get(0).getScore();
         worstScore = population.get(0).getScore();
         totalScore = 0;
         for (Chromosome chro : population) {
-            setChromosomeScore(chro);
+            setChromosomeScore(chro,cities,airports);
             if (chro.getScore() > bestScore) { //设置最好基因值
                 bestScore = chro.getScore();
                 if (y < bestScore) {
-                    x = changeX(chro);
+                    x = copy(chro,airports);
                     y = bestScore;
                     geneI = generation;
                 }
@@ -150,29 +153,26 @@ public abstract class GeneticAlgorithm {
      * @param chro
      * @Description: 设置染色体得分
      */
-    private void setChromosomeScore(Chromosome chro) {
+    private void setChromosomeScore(Chromosome chro,City[] cities,Airport[] airports) {
         if (chro == null) {
             return;
         }
-        double x = changeX(chro);
-        double y = caculateY(x);
+        double x = copy(chro,airports);
+        double y = allCost(cities,airports);
         chro.setScore(y);
 
     }
 
-    /**
-     * @param chro
-     * @Description: 将二进制转化为对应的X
-     */
-    public abstract double changeX(Chromosome chro);
+
+
+    public abstract double copy(Chromosome chro,Airport[] airports);
 
 
     /**
-     * @param x
+     *
      * @Description: 根据X计算Y值 Y=F(X)
      */
-    public abstract double caculateY(double x);
-
+    public abstract double allCost(City[] cities,Airport[] airports);
 
 
 
