@@ -84,6 +84,9 @@ public class PersonTest {
             //问题二：编译通过，运行也通过
             Object obj = new Woman();
             Person p = (Person)obj;
+
+            //问题三：编译不通过
+//            Man m5 = new Woman();
         }
     }
 }
