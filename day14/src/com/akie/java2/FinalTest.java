@@ -11,8 +11,12 @@ package com.akie.java2;
 *           比如：Object类中的getClass()方法
 *
 *4、final 用来修饰变量：此时的“变量”就称为是一个常量
-*       4.1 final修饰属性：可以考虑赋值的位置有：显示初始化、
+*       4.1 final修饰属性：可以考虑赋值的位置有：显示初始化、代码块中初始化、构造器中初始化
+*       4.2 final修饰局部变量：
+*           尤其是使用final修饰形参时，表明此形参是一个常量。当我们调用此方法时，给常量形参赋值一个实参。
+*           一旦赋值以后，就只能在此方法体内使用此形参，但不能重新赋值。
 *
+* static  final: 用来修饰属性：全局常量
 * */
 public class FinalTest {
 
@@ -46,10 +50,23 @@ public class FinalTest {
 //        width = 20;    final属性的width不能被修改
     }
 
+    public void show(){
+        final int num = 10; //常量
+//        num += 20;  不能对final进行操作
+    }
+
+    public void show(final int num){
+//        num = 20;  形参传入后，只能调用不能修改
+        System.out.println(num);
+    }
+
     public static void main(String[] args) {
         int num = 10;
 
         num = num + 5;
+
+        FinalTest test = new FinalTest();
+        test.show(10);
     }
 
 }
