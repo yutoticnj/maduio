@@ -26,6 +26,7 @@ package com.akie.java1;
 * 8、接口的具体使用可以体现多态性
 * 9、接口，实际上可以看做一种规范
 *
+* 面试题：抽象类与接口有那些异同？
 * */
 public class InterfaceTest {
     public static void main(String[] args) {
